@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Gundluru - projects</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&family=Lato:wght@400;700&display=swap">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#home">Nikhil Gundluru</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#intro">INTRO</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="https://drive.google.com/file/d/18qHYKXKMa1VjrN31VL41QgkSAnnGgkEo/view?usp=drive_link" target="_blank"><span>RESUME</span></a></li>                
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="home-content">
+            <div class="text-content">
+                <h1 style="justify-content: center; align-items: center; display: flex; gap: 15px; margin-left: 8%;">NIKHIL  GUNDLURU</h1>
+                <hr style="width: 150px; height: 2px; border: none; color: #333; background-color: #333; margin: 10px;">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/nikhil-gundluru-0b2554206/" target="_blank" class="social-icon linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/nikhilgundluru" target="_blank" class="social-icon github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com/your-twitter-handle" target="_blank" class="social-icon twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div><br>
+                <p>Hi, I'm Nikhil Gundluru, a Data Science enthusiast with a passion for analyzing data and developing machine learning models. Explore my projects and skills to learn more about my work.</p>
+            </div>
+            <div class="image-content">
+                <img src="https://img.freepik.com/premium-vector/cute-little-boy-using-laptop-computer-vector-cartoon-illustration_1142-73869.jpg?w=740" alt="Nikhil Gundluru">
+            </div>
+        </div>
+    </section>
+
+    <section id="intro">
+        <div class="intro-background"></div>
+        <div class="intro-content">
+            <div class="intro-image">
+                <img src="https://img.freepik.com/free-photo/3d-rendering-kid-playing-digital-game_23-2150898496.jpg?t=st=1721414762~exp=1721418362~hmac=877538728df98f4dc18ebf1c62667d693bec5bfbe4cca44bdeaaefa79a2eb9f9&w=740" alt="intro Me">
+            </div>
+            <div class="intro-text">
+                <p><span>Hello!</span> I'm Nikhil,<br><br> A passionate Data Science enthusiast with a solid foundation in Computer Science and Engineering. I am a graduate where I completed my bachelor's degree at RGUKT - IIIT, RK Valley.</p><br><br>
+                <p>My journey in data science began with a keen interest in understanding data patterns and trends. Over the years, I have developed a strong skill set in data analysis, machine learning, and data visualization.</p><br>
+                <a href="https://drive.google.com/file/d/18qHYKXKMa1VjrN31VL41QgkSAnnGgkEo/view?usp=drive_link" class="btn">Resume/CV</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="heading">
+            <h2>PROJECTS</h2>
+            <p>A glimpse of projects that I've been working on</p>
+        </div>
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Show All</button>
+            <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+            <button class="filter-btn" data-filter="visualization">Visualization</button>
+            <button class="filter-btn" data-filter="deep-learning">Deep Learning</button>
+        </div>
+        <div class="project-cards">
+            <div class="project-card" data-category="machine-learning">
+                <img src="https://www.forbes.com/advisor/wp-content/uploads/2021/12/housing_predictions.jpg" alt="Project 1">
+                <div class="card-overlay">
+                    <h3>House Price Prediction</h3>
+                    <a href="#popup-house-price-prediction" class="open-btn">Open</a>
+                </div>
+            </div>
+            <div class="project-card" data-category="machine-learning">
+                <img src="https://camo.githubusercontent.com/321a5ecc99b4cf8249172d55a53ccb309ad3feaaac09a88e06eb398490cf7a88/68747470733a2f2f65787465726e616c2d636f6e74656e742e6475636b6475636b676f2e636f6d2f69752f3f753d687474707325334125324625324661692d6a6f75726e65792e636f6d25324677702d636f6e74656e7425324675706c6f61647325324632303139253246303625324666726175642d454d562d636869702d6372656469742d636172642e6a706726663d31266e6f66623d31" alt="Project 2">
+                <div class="card-overlay">
+                    <h3>Credit Card Fraud Detection</h3>
+                    <a href="#popup-credit-card-fraud-detection" class="open-btn">Open</a>
+                </div>
+            </div>
+            
+            <!-- Add more project cards as needed -->
+
+            <!-- Popup Structure -->
+            <div id="popup-house-price-prediction" class="popup">
+                <div class="popup-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>House Price Prediction</h2>
+                    <p>The House Price Prediction model is designed to forecast property prices in Bengaluru using machine learning algorithms. This model utilizes various features of the properties to predict their prices accurately, assisting potential buyers, real estate professionals, and investors in making informed decisions.</p>
+                    <img src="https://media.licdn.com/dms/image/D5612AQG60wSyPtUXyA/article-cover_image-shrink_720_1280/0/1706073751405?e=2147483647&v=beta&t=SMR3gmnP1KyzNMntbcNfVEb_DWDAVtnc5BANSZ6mLWk" alt="Project Screenshot" class="popup-image">
+                    <div class="popup-buttons">
+                        <a href="https://github.com/Nikhil2349/House-Price-Prediction" target="_blank" class="btn">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div id="popup-credit-card-fraud-detection" class="popup">
+                <div class="popup-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>Credit Card Fraud Detection</h2>
+                    <p>The Credit Card Fraud Detection project is designed to identify and prevent fraudulent credit card transactions using machine learning techniques. Fraudulent transactions pose a significant risk to financial institutions and cardholders, and detecting these anomalies is crucial for minimizing financial loss and ensuring the security of credit card systems.</p>
+                    <img src="https://www.mdpi.com/systems/systems-11-00305/article_deploy/html/images/systems-11-00305-g005.png" alt="Project Screenshot" class="popup-image">
+                    <div class="popup-buttons">
+                        <a href="https://github.com/Nikhil2349/Credit-Card-Fraud-Dtetection" target="_blank" class="btn">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-container">
+            <h2>CONTACT</h2>
+            <p>Feel free to contact me. For open source projects, please open an issue or pull request on GitHub. If you want to follow my work, reach me on linkedin. Otherwise, send me an email at <a href="mailto:nikhilgundluru349@gmail.com">nikhil gundluru349@gmail.com</a>.</p>
+            <div class="contact-buttons">
+                <a href="https://github.com/your-github-profile" target="_blank" class="btn">GitHub</a>
+                <a href="https://www.linkedin.com/in/nikhil-gundluru-0b2554206/" target="_blank" class="btn">LinkedIn</a>
+                <a href="mailto:nikhilgundlurur349@gmail.com" class="btn">Email</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Nikhil Gundluru. ||  All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        const body = document.querySelector('body');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            burger.classList.toggle('toggle');
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                body.classList.add('scrolled');
+            } else {
+                body.classList.remove('scrolled');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const filter = button.getAttribute('data-filter');
+
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+
+        // Get all open buttons
+var openBtns = document.querySelectorAll(".open-btn");
+
+// Get all popups
+var popups = document.querySelectorAll(".popup");
+
+// Get all close buttons
+var closeBtns = document.querySelectorAll(".close-btn");
+
+// Open the corresponding popup when the "Open" button is clicked
+openBtns.forEach(function(btn) {
+    btn.onclick = function(event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        var targetPopup = document.querySelector(btn.getAttribute("href"));
+        targetPopup.style.display = "block";
+    }
+});
+
+// Close the popup when the "close" button is clicked
+closeBtns.forEach(function(btn) {
+    btn.onclick = function() {
+        this.closest('.popup').style.display = "none";
+    }
+});
+
+// Close the popup when the user clicks outside of it
+window.onclick = function(event) {
+    popups.forEach(function(popup) {
+        if (event.target == popup) {
+            popup.style.display = "none";
+        }
+    });
+}
+
+    </script>
+</body>
+</html>
