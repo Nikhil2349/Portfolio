@@ -93,6 +93,13 @@
                     <a href="#popup-credit-card-fraud-detection" class="open-btn">Open</a>
                 </div>
             </div>
+            <div class="project-card" data-category="visualization">
+                <img src="https://inc42.com/cdn-cgi/image/quality=75/https://asset.inc42.com/2023/11/Zomato-Q2-f4.png" alt="Project 2" style="width: 280px;">
+                <div class="card-overlay">
+                    <h3>Blinkit Analysis</h3>
+                    <a href="#popup-blinkit-sales-analysis" class="open-btn">Open</a>
+                </div>
+            </div>
             
             <!-- Add more project cards as needed -->
 
@@ -116,6 +123,17 @@
                     <img src="https://www.mdpi.com/systems/systems-11-00305/article_deploy/html/images/systems-11-00305-g005.png" alt="Project Screenshot" class="popup-image">
                     <div class="popup-buttons">
                         <a href="https://github.com/Nikhil2349/Credit-Card-Fraud-Dtetection" target="_blank" class="btn">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div id="popup-blinkit-sales-analysis" class="popup">
+                <div class="popup-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>Blinkit Market Sales Analysis</h2>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr2w8VUsox9214JnEnVyDLvXGQCypS5mxXEg&s" alt="Project Screenshot"  class="popup-image">
+                    <p>The Credit Card Fraud Detection project is designed to identify and prevent fraudulent credit card transactions using machine learning techniques. Fraudulent transactions pose a significant risk to financial institutions and cardholders, and detecting these anomalies is crucial for minimizing financial loss and ensuring the security of credit card systems.</p>
+                    <div class="popup-buttons">
+                        <a href="https://project.novypro.com/zKIYEb" target="_blank" class="btn">View Visualisation</a>
                     </div>
                 </div>
             </div>
@@ -184,38 +202,38 @@
         });
 
         // Get all open buttons
-var openBtns = document.querySelectorAll(".open-btn");
+        var openBtns = document.querySelectorAll(".open-btn");
 
-// Get all popups
-var popups = document.querySelectorAll(".popup");
+        // Get all popups
+        var popups = document.querySelectorAll(".popup");
 
-// Get all close buttons
-var closeBtns = document.querySelectorAll(".close-btn");
+        // Get all close buttons
+        var closeBtns = document.querySelectorAll(".close-btn");
 
-// Open the corresponding popup when the "Open" button is clicked
-openBtns.forEach(function(btn) {
-    btn.onclick = function(event) {
-        event.preventDefault(); // Prevent default anchor behavior
-        var targetPopup = document.querySelector(btn.getAttribute("href"));
-        targetPopup.style.display = "block";
-    }
-});
+        // Open the corresponding popup when the "Open" button is clicked
+        openBtns.forEach(function(btn) {
+            btn.onclick = function(event) {
+                event.preventDefault(); // Prevent default anchor behavior
+                var targetPopup = document.querySelector(btn.getAttribute("href"));
+                targetPopup.style.display = "block";
+            }
+        });
 
-// Close the popup when the "close" button is clicked
-closeBtns.forEach(function(btn) {
-    btn.onclick = function() {
-        this.closest('.popup').style.display = "none";
-    }
-});
+        // Close the popup when the "close" button is clicked
+        closeBtns.forEach(function(btn) {
+            btn.onclick = function() {
+                this.closest('.popup').style.display = "none";
+            }
+        });
 
-// Close the popup when the user clicks outside of it
-window.onclick = function(event) {
-    popups.forEach(function(popup) {
-        if (event.target == popup) {
-            popup.style.display = "none";
+        // Close the popup when the user clicks outside of it
+        window.onclick = function(event) {
+            popups.forEach(function(popup) {
+                if (event.target == popup) {
+                    popup.style.display = "none";
+                }
+            });
         }
-    });
-}
 
     </script>
 </body>
