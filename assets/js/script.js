@@ -1,7 +1,7 @@
 particlesJS('particles-js', {
     "particles": {
         "number": {
-        "value": 130,
+        "value": 120,
         "density": {
             "enable": true,
             "value_area": 550
@@ -35,7 +35,7 @@ particlesJS('particles-js', {
         "random": true,
         "anim": {
             "enable": false,
-            "speed": 30,
+            "speed": 20,
             "size_min": 0.1,
             "sync": false
         }
@@ -50,8 +50,8 @@ particlesJS('particles-js', {
         "move": {
         "enable": true,
         "speed": 4,
-        "direction": "none",
-        "random": false,
+        "direction": "top-right",
+        "random": true,
         "straight": false,
         "out_mode": "out",
         "bounce": false,
@@ -103,7 +103,7 @@ particlesJS('particles-js', {
     },
     "retina_detect": true
     });
-    
+
     const burger = document.querySelector('.burger');
     const navLinks = document.querySelector('.nav-links');
     const body = document.querySelector('body');
@@ -150,3 +150,31 @@ particlesJS('particles-js', {
     function closePopup(id) {
         document.getElementById(id).style.display = 'none';
     }
+
+    const circularProgress = document.querySelectorAll(".circular-progress");
+
+    Array.from(circularProgress).forEach((progressBar) => {
+      const progressValue = progressBar.querySelector(".percentage");
+      const innerCircle = progressBar.querySelector(".inner-circle");
+      let startValue = 0,
+        endValue = Number(progressBar.getAttribute("data-percentage")),
+        speed = 20,
+        progressColor = progressBar.getAttribute("data-progress-color");
+    
+      const progress = setInterval(() => {
+        startValue++;
+        progressValue.textContent = `${startValue}%`;
+        progressValue.style.color = `${progressColor}`;
+    
+        innerCircle.style.backgroundColor = `${progressBar.getAttribute(
+          "data-inner-circle-color"
+        )}`;
+    
+        progressBar.style.background = `conic-gradient(${progressColor} ${
+          startValue * 3.6
+        }deg,${progressBar.getAttribute("data-bg-color")} 0deg)`;
+        if (startValue === endValue) {
+          clearInterval(progress);
+        }
+      }, speed);
+    });
