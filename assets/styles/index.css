@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yesteryear&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One+Outline&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Shrikhand&family=Trade+Winds&display=swap');
 :root {
     --d: 700ms;
     --e: cubic-bezier(0.19, 1, 0.22, 1);
@@ -184,8 +184,10 @@ body.scrolled header {
 }
 
 .text-content h1 {
-    font-size: 45px;
-    margin-bottom: 10px;
+    font-family: "Kumar One Outline", system-ui;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 50px;
 }
 
 .text-content p {
@@ -258,14 +260,6 @@ body.scrolled header {
     align-items: center;
 }
 
-.intro-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    filter: blur(8px);
-}
 
 .intro-content {
     position: relative;
@@ -342,9 +336,9 @@ svg{
     max-width: 100%;
     justify-content: space-around;
     margin-block-start: 30px;
-    border-left: 12px solid rgb(228, 188, 79); /* Added semicolon */
-    border-top-left-radius: 18px; /* Curved top left corner */
-    border-bottom-left-radius: 18px; /* Curved bottom left corner */
+    border-left: 22px solid #e2b36d; /* Added semicolon */
+    border-top-left-radius: 50px; /* Curved top left corner */
+    border-bottom-left-radius: 50px; /* Curved bottom left corner */
     padding-left: 10px; /* Optional: adds space between the border and the content */
     padding-bottom: 40px;
 }
@@ -355,7 +349,7 @@ svg{
     margin-block: 40px;
 }
 .first img{
-    background-color: rgb(228, 188, 79);
+    background-color: #e2b36d;
     border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
 }
 
@@ -383,7 +377,7 @@ svg{
 
 /* Progress Indicator */
 .progress-bar {
-    background-color: #718eb9;
+    background-color: #4b8ead;
     height: 100%;
     text-align: right;
     padding-right: 10px;
