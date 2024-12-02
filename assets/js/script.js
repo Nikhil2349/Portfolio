@@ -1,14 +1,14 @@
 particlesJS('particles-js', {
     "particles": {
         "number": {
-        "value": 120,
+        "value": 20,
         "density": {
             "enable": true,
             "value_area": 550
         }
         },
         "color": {
-        "value": "#124898"
+        "value": "#ff8c00"
         },
         "shape": {
         "type": "circle",
@@ -24,14 +24,14 @@ particlesJS('particles-js', {
         "value": 0.5,
         "random": false,
         "anim": {
-            "enable": true,
+            "enable": false,
             "speed": 3,
             "opacity_min": 0.1,
             "sync": true
         }
         },
         "size": {
-        "value": 6,
+        "value": 15,
         "random": true,
         "anim": {
             "enable": false,
@@ -41,7 +41,7 @@ particlesJS('particles-js', {
         }
         },
         "line_linked": {
-        "enable": true,
+        "enable": false,
         "distance": 130,
         "color": "#ddd",
         "opacity": 0.4,
@@ -49,7 +49,7 @@ particlesJS('particles-js', {
         },
         "move": {
         "enable": true,
-        "speed": 4,
+        "speed": 5,
         "direction": "top-right",
         "random": true,
         "straight": false,
@@ -104,12 +104,36 @@ particlesJS('particles-js', {
     "retina_detect": true
     });
 
+    const navLinkEls = document.querySelectorAll('.nav-link');
+    const sectionEls = document.querySelectorAll('section');
+
+    let currentSection = 'home'; // Initial section, adjust as needed
+
+    window.addEventListener('scroll', () => {
+        sectionEls.forEach(sectionEl => {
+            const sectionTop = sectionEl.offsetTop - 50; // Adjust offset for sticky headers
+            const sectionHeight = sectionEl.offsetHeight;
+
+            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                currentSection = sectionEl.id;
+            }
+        });
+
+        navLinkEls.forEach(navLinkEl => {
+            if (navLinkEl.href.includes(`#${currentSection}`)) {
+                document.querySelector('.active')?.classList.remove('active');
+                navLinkEl.classList.add('active');
+            }
+        });
+    });
+
+
     const burger = document.querySelector('.burger');
     const navLinks = document.querySelector('.nav-links');
     const body = document.querySelector('body');
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.card');
-
+    
     burger.addEventListener('click', () => {
         navLinks.classList.toggle('nav-active');
         burger.classList.toggle('toggle');
@@ -122,15 +146,22 @@ particlesJS('particles-js', {
             body.classList.remove('scrolled');
         }
     });
-
+    
     document.addEventListener('DOMContentLoaded', () => {
+        // Set the first filter button as active by default
+        const firstButton = filterButtons[0];
+        firstButton.classList.add('active');
+        
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
                 const filter = button.getAttribute('data-filter');
-
+    
+                // Remove the 'active' class from all buttons
                 filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add the 'active' class to the clicked button
                 button.classList.add('active');
-
+    
+                // Show or hide project cards based on the filter
                 projectCards.forEach(card => {
                     if (filter === 'all' || card.getAttribute('data-category') === filter) {
                         card.style.display = 'block';
@@ -141,6 +172,7 @@ particlesJS('particles-js', {
             });
         });
     });
+    
 
     //popup operation//
     function openPopup(id) {
@@ -150,21 +182,21 @@ particlesJS('particles-js', {
     function closePopup(id) {
         document.getElementById(id).style.display = 'none';
     }
-
     const circularProgress = document.querySelectorAll(".circular-progress");
 
-    Array.from(circularProgress).forEach((progressBar) => {
+    const startProgress = (progressBar) => {
       const progressValue = progressBar.querySelector(".percentage");
       const innerCircle = progressBar.querySelector(".inner-circle");
       let startValue = 0,
         endValue = Number(progressBar.getAttribute("data-percentage")),
-        speed = 20,
+        speed = 30,
         progressColor = progressBar.getAttribute("data-progress-color");
     
       const progress = setInterval(() => {
         startValue++;
         progressValue.textContent = `${startValue}%`;
-        progressValue.style.color = `${progressColor}`;
+        progressValue.style.color = "white"; // Change color to white
+        progressValue.style.fontSize = "18px"; // Increase font size to 18px (you can adjust this value)
     
         innerCircle.style.backgroundColor = `${progressBar.getAttribute(
           "data-inner-circle-color"
@@ -177,4 +209,28 @@ particlesJS('particles-js', {
           clearInterval(progress);
         }
       }, speed);
+    };
+    
+    
+    const observerOptions = {
+      root: null, // observe in the viewport
+      rootMargin: "0px",
+      threshold: 0.6, // Trigger when 50% of the element is in view
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          startProgress(entry.target); // Start animation when in view
+          observer.unobserve(entry.target); // Stop observing after animation starts
+        }
+      });
+    }, observerOptions);
+    
+    // Observe each circular progress element
+    Array.from(circularProgress).forEach((progressBar) => {
+      observer.observe(progressBar);
     });
+    
+
+    
