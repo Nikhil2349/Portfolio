@@ -104,50 +104,67 @@ body.scrolled header {
 .burger div {
     width: 25px;
     height: 3px;
-    background: black;
+    background: white;
     transition: all 0.3s ease;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-    .nav-links {
-        position: absolute;
-        right: 0;
-        height: 100vh;
-        top: 0;
-        background: #605d5d;
+@media (max-width: 508px) {
+    
+    .logo a{
+        font-size: 14px;
+    }
+    nav {
         display: flex;
+        align-items: center;
+    }
+    .nav-links {
+        display: none; /* Hide the nav links by default */
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: 485px;
+        background-color: black;
         flex-direction: column;
         align-items: center;
-        width: 200px;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
+        margin: 0;
+        padding: 20px 0;
     }
 
-    .nav-links li {
-        margin-top: 20px;
+    .nav-links.active {
+        display: flex; /* Display nav links when the burger menu is clicked */
+        border: none;
+    }
+
+    .nav-link {
+        padding: 15px 20px;
+        font-size: 18px;
+        border: none;
     }
 
     .burger {
-        display: flex;
+        display: flex; /* Show the burger menu on small screens */
+        border: none;
     }
 
-    .nav-active {
-        transform: translateX(0);
+    .burger.active div:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 8px;
     }
 
-    .toggle .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .toggle .line2 {
+    .burger.active div:nth-child(2) {
         opacity: 0;
     }
 
-    .toggle .line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
+    .burger.active div:nth-child(3) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -8px;
     }
 }
+
 
 #particles-js {
     position: absolute;
@@ -220,7 +237,7 @@ body.scrolled header {
     }
 
     .image-content img {
-        max-width: 100%;
+        width: 300px;
     }
 }
 
@@ -471,6 +488,20 @@ svg{
     color: white;
     text-align: center;
 }
+/* Responsive */
+@media (max-width: 508px) {
+    #skills {
+        padding: 5%;
+        margin-bottom: 8%;
+    }
+    .first {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
   
 #projects {
     margin-top: 60px;

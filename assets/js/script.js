@@ -104,6 +104,15 @@ particlesJS('particles-js', {
     "retina_detect": true
     });
 
+
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+
+    burger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        burger.classList.toggle('active');
+    });
+
     const navLinkEls = document.querySelectorAll('.nav-link');
     const sectionEls = document.querySelectorAll('section');
 
@@ -128,16 +137,12 @@ particlesJS('particles-js', {
     });
 
 
-    const burger = document.querySelector('.burger');
-    const navLinks = document.querySelector('.nav-links');
+
     const body = document.querySelector('body');
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.card');
     
-    burger.addEventListener('click', () => {
-        navLinks.classList.toggle('nav-active');
-        burger.classList.toggle('toggle');
-    });
+
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 0) {
