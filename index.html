@@ -35,7 +35,7 @@
             <div id="particles-js"></div>
             <div class="home-content">
                 <div class="text-content" style="color: white;">
-                    <h1>Hi there... <br>I'am <span style="font-size: 55px; color: rgb(184, 122, 8);"> Nikhil Gundluru </span><br>Data Science Entusiant</h1>
+                    <h1>Hi there... <br>I'am <span> Nikhil Gundluru </span><br>Data Science Entusiant</h1>
                     <br>
                     <p>I’m a Data Scientist in the making, specializing in Python programming, machine learning, and data visualization. I create impactful projects that drive results. Let's build something amazing together!...</p>
                     <div class="social-icons" >
@@ -68,35 +68,30 @@
                     <p>My journey in data science began with a keen interest in understanding data patterns and trends.
                         Over the years, I have developed a strong skill set in data analysis, machine learning, and data
                         visualization.</p><br>
-
                         <div class="row" id="timeline">
                             <div class="col-lg-12 text-center">
-                                <svg width="860" height="100">
+                                <svg width="100%" height="100" viewBox="0 0 860 100">
                                     <line x1="0" y1="50" x2="900" y2="50" style="stroke:orange; stroke-width:1.5" />
                                     <!-- Customize length here -->
-            
-                                    <circle cx="250" cy="50" r="10"  stroke-width="6" fill="orange" />
+                        
+                                    <circle cx="250" cy="50" r="10" stroke-width="6" fill="orange" />
                                     <text text-anchor="middle" x="250" y="80" fill="white">2020</text>
-                                    <text font-size="14" text-anchor="middle" x="130" y="30" fill="white">Pre University Course
-                                        (PUC)</text>
-                                    <text style="font-style: italic" font-size="14" text-anchor="middle" x="130" y="80"
-                                        fill="white">RGUKT - IIIT</text>
-            
-                                    <circle cx="590" cy="50" r="10"  stroke-width="6" fill="orange" />
+                                    <text font-size="14" text-anchor="middle" x="130" y="30" fill="white">Pre University Course (PUC)</text>
+                                    <text style="font-style: italic" font-size="14" text-anchor="middle" x="130" y="80" fill="white">RGUKT - IIIT</text>
+                        
+                                    <circle cx="590" cy="50" r="10" stroke-width="6" fill="orange" />
                                     <text text-anchor="middle" x="590" y="80" fill="white">2024</text>
-                                    <text font-size="14" text-anchor="middle" x="420" y="30" fill="white">B.Tech in Computer Science
-                                        Engineering</text>
-                                    <text style="font-style: italic" font-size="14" text-anchor="middle" x="410" y="80"
-                                        fill="white">RGUKT - IIIT</text>
-            
-                                    <circle cx="800" cy="50" r="10"  stroke-width="6" fill="orange" />
+                                    <text font-size="14" text-anchor="middle" x="420" y="30" fill="white">B.Tech in Computer Science Engineering</text>
+                                    <text style="font-style: italic" font-size="14" text-anchor="middle" x="410" y="80" fill="white">RGUKT - IIIT</text>
+                        
+                                    <circle cx="800" cy="50" r="10" stroke-width="6" fill="orange" />
                                     <text text-anchor="middle" x="800" y="80" fill="white">Oct 2024</text>
                                     <text font-size="14" text-anchor="middle" x="690" y="30" fill="white">Data Science Intern</text>
-                                    <text style="font-style: italic" font-size="14" text-anchor="middle" x="690" y="80"
-                                        fill="white">Feynn Labs</text>
+                                    <text style="font-style: italic" font-size="14" text-anchor="middle" x="690" y="80" fill="white">Feynn Labs</text>
                                 </svg>
                             </div>
                         </div>
+                        
                 </div>
                 
             </div>
@@ -213,16 +208,16 @@
 
                 <!-- Card 2 -->
                 <div class="card" data-category="machine-learning">
-                    <img src="./assets/images/1_hJ60oLP_nSQUvAKroaBKlQ.png" alt="Card Image">
+                    <img src="assets\images\twitters-influence-on-IPL-1.webp" alt="Card Image">
                     <div class="card-content">
-                        <h3 class="card-title">Credit Card Fraud Detection</h3>
+                        <h3 class="card-title">Twitter Sentiment Analysis</h3>
                         <div class="card-tags">
-                            <span>Logistic</span>
-                            <span>Random Forest</span>
-                            <span>XGboost</span>
+                            <span>Twitter API</span>
+                            <span>nltk</span>
+                            <span>TfidfVectorizer</span>
+                            <span>scikit-learn</span>
                         </div>
-                        <p class="card-context">Implemented a Credit Card Fraud Detection system using classification
-                            models to analyze fraudulent transactions.</p>
+                        <p class="card-context">This project analyzes IPL-related tweets from December 2024, performing sentiment analysis using machine learning models.</p>
                         <a onclick="openPopup('popup2')">Read More >></a>
                     </div>
                 </div>
@@ -319,6 +314,22 @@
                     </div>
                 </div>
 
+                <!--card 9-->
+                <div class="card" data-category="machine-learning">
+                    <img src="./assets/images/1_hJ60oLP_nSQUvAKroaBKlQ.png" alt="Card Image">
+                    <div class="card-content">
+                        <h3 class="card-title">Credit Card Fraud Detection</h3>
+                        <div class="card-tags">
+                            <span>Logistic</span>
+                            <span>Random Forest</span>
+                            <span>XGboost</span>
+                        </div>
+                        <p class="card-context">Implemented a Credit Card Fraud Detection system using classification
+                            models to analyze fraudulent transactions.</p>
+                        <a onclick="openPopup('popup9')">Read More >></a>
+                    </div>
+                </div>
+
                 <!-- Pop-up for Project 1 -->
                 <div id="popup1" class="popup-overlay">
                     <span class="close-btn" onclick="closePopup('popup1')">BACK</span>
@@ -404,12 +415,89 @@
                         <p>Check out the live demo and GitHub repository<button onclick="window.location.href='https://github.com/Nikhil2349/House-Price-Prediction'">Github Repo</button></p>
                     </div>
                 </div>
+                <!-- Pop-up for Project 1 -->
+                <div id="popup2" class="popup-overlay">
+                    <span class="close-btn" onclick="closePopup('popup2')">BACK</span>
+                    <div class="popup-content">
+                        <h1>Sentiment Analysis of IPL Tweets</h1>
+                        <hr style="margin-block: 10px;">
+                        <h2>1.Introduction</h2>
+                        <p>The goal of this project was to analyze the sentiment of tweets related to the Indian Premier League (IPL). Twitter, being a powerful social media platform, serves as a great source for public sentiment analysis. By analyzing these tweets, we aim to understand how people feel about the IPL, its players, and events. The dataset consists of tweets collected in December 2024, with the key columns: <strong>Username, Location, Likes, Text, Month, and Year.</strong></p>
+                        <img src="assets\images\65856aa80fd2e3a300403a51_ssw.jpg" alt="assets\images\65856aa80fd2e3a300403a51_ssw.jpg" style="height: 320px; margin-inline: 150px;">
+                        <h2>2. Data Collection</h2>
+                        <p>The data collection was performed by utilizing the twikit Python library, which is designed to interact with Twitter and extract relevant tweet data. The following columns were collected:</p>
+                        <ul>
+                            <li>Username: The user who posted the tweet</li>
+                            <li>Location: The geographical location of the user</li>
+                            <li>Likes: The number of likes the tweet received</li>
+                            <li>Text: The content of the tweet</li>
+                            <li>Month and Year: The timestamp when the tweet was posted</li>
+                        </ul>
+                        <img src="assets\images\Screenshot 2024-12-12 190330.png" alt="assets\images\Screenshot 2024-12-12 190330.png" style="height: 350px;">
+                        <p>The minimum number of tweets targeted for collection was 4,000. The search query was set to include only English tweets related to IPL (ipl lang:en).</p>
+                        <h2>3. Data Preprocessing</h2>
+                        <p>After gathering the tweets, the following preprocessing steps were performed:</p>
+                        <ul>
+                            <li>Missing Values Handling: The missing Location values were forward-filled (ffill() method).</li>
+                            <li>Datetime Conversion: The Created At column was converted into a datetime object to extract meaningful information, such as the month and year.</li>
+                            <li>Filtering: Data for the year 2024 and month December were retained for analysis.</li>
+                            <li>Text Cleaning: Text cleaning involved removing emojis, URLs, special characters, and extra spaces using regular expressions. The text was also converted to lowercase to standardize it for analysis.</li>
+                            <li>Stopwords Removal and Stemming: Using NLTK, English stopwords were removed and stemming was applied to reduce words to their root forms.</li>
+                        </ul>
+                        <img src="assets\images\Screenshot 2024-12-12 190416.png" alt="assets\images\Screenshot 2024-12-12 190416.png" style="height: 350px;">
+                        <h2>4. Feature Engineering</h2>
+                        <ul>
+                            <li><strong>Sentiment Analysis:</strong> Sentiment polarity for each tweet was computed using TextBlob, which assigns a polarity score between -1 (negative) and +1 (positive). Based on this score, the tweets were categorized into three sentiments: positive, negative, or neutral.</li>
+                            <li><strong>TF-IDF Vectorization:</strong> A TfidfVectorizer was used to convert the cleaned tweet text into numerical features. This method helps to extract important words/phrases and transforms the text data into a format suitable for machine learning.</li>
+                        </ul>
+                        <h2>5. Data Visualizations</h2>
+                        <p>Various visualizations were created to explore the data and insights:</p>
+                        <ul>
+                            <li>Word Cloud: A word cloud is a visual representation of the most frequently occurring words in a given dataset, with the size of each word corresponding to its frequency. In this analysis, the word cloud was generated for the cleaned tweet text, which excluded common stopwords and irrelevant characters. The objective of the word cloud was to identify the most common themes and keywords associated with the IPL.</li>
+                            <img src="assets\images\download.png" alt="assets\images\download.png" style="height: 350px; margin-inline: 100px;">
+                            <li>Sentiment Distribution Pie Chart: By looking at the pie chart, we could see how much of the conversation was positive, negative, or neutral. If the positive sentiment is dominant, it would suggest that people generally had favorable opinions about the IPL. If negative sentiment is higher, it could indicate dissatisfaction with the event, teams, or players. A balanced distribution might reflect mixed opinions about various aspects of the IPL.</li>
+                            <img src="assets\images\download (17).png" alt="assets\images\download (17).png" style="height: 350px; margin-inline: 250px;">
+                            <li>Sentiment by Location: By focusing on the locations with the highest positive sentiment, we can infer where IPL enjoys a larger fan base or where people are more passionate and positive about the event. Conversely, locations with higher negative sentiment could indicate regions where the IPL might not be as well-received, potentially due to local team rivalries, controversies, or other factors. This visualization can be useful for marketers and event organizers to better understand regional sentiments and tailor their campaigns or actions accordingly.</li>
+                            <img src="assets\images\download (19).png" alt="assets\images\download (19).png" style="height: 350px; margin-inline: 180px;">
+                            <li>Likes vs Sentiment: The boxplot can reveal if positive tweets, on average, received more likes than negative or neutral tweets, which would suggest a higher level of engagement and approval from users. It can also help identify outliers, or specific tweets that received an unusually high number of likes despite having a negative sentiment, which could be indicative of viral tweets or controversial opinions that captured the audience’s attention.</li>
+                            <img src="assets\images\download (20).png" alt="assets\images\download (20).png" style="height: 350px; margin-inline: 250px;">
+                        </ul>
+                        <h2>6. Model Training</h2>
+                        <p>The sentiment analysis of the tweets was treated as a classification problem, where the target variable is the sentiment (positive, negative, neutral) and the feature set is the TF-IDF representation of the tweets. Three machine learning models were trained and evaluated:</p>
+                        <ul>
+                            <li>Logistic Regression: A simple and efficient model for text classification tasks.</li>
+                            <li>Random Forest Classifier: A powerful ensemble method that combines multiple decision trees to improve classification accuracy.</li>
+                            <li>Naive Bayes Classifier: A probabilistic model commonly used for text classification tasks based on the Bayes theorem.</li>
+                        </ul>
+                        <h2>Model Evaluation</h2>
+                        <p>The models were evaluated using the following metrics:</p>
+                        <ul>
+                            <li>Accuracy: The proportion of correctly classified instances.</li>
+                            <li>Classification Report: Precision, recall, and F1-score for each sentiment class.</li>
+                            <li>Cross-validation: For hyperparameter tuning and to assess the robustness of the models.
+                            </li>
+                        </ul>
+                        <p>The results of model training and evaluation are as follows:</p>
+                        <ul>
+                            <li><strong> Logistic Regression:</strong> Accuracy = 74.58%</li>
+                            <li><strong>Random Forest Classifier:</strong> Accuracy = 78.89%</li>
+                            <li><strong>Naive Bayes Classifier:</strong> Accuracy = 70.72%</li>
+                            <li><strong>GridSearchCV (for Logistic Regression):</strong> Achieved the best cross-validation accuracy of 79.61%.</li>
+                        </ul>
+                        <p>Among the models, Random Forest outperformed the other models in terms of accuracy, making it the best choice for this task.</p>
+                        <h2>7. Conclusion</h2>
+                        <p>The sentiment analysis of IPL-related tweets revealed interesting insights into public opinion during the IPL event in December 2024. The data preprocessing steps ensured that the text data was clean and standardized, making it suitable for machine learning. The Random Forest model provided the highest accuracy in classifying tweets based on sentiment.</p>
+                        <p>In the future, additional features such as player mentions, hashtags, and tweet trends could be integrated to improve sentiment classification and analysis. Furthermore, real-time sentiment analysis could be used to track the mood of fans during live IPL matches.</p>
+                        <p>Check out the live demo and GitHub repository<button onclick="window.location.href='https://github.com/Nikhil2349/Twitter-Sentiment-Analysis'">Github Repo</button></p>
+                        <img src="assets\images\1_vp1M37AGMOFwCvLxVm62IA.jpg" alt="assets\images\1_vp1M37AGMOFwCvLxVm62IA.jpg" style="height: 350px; margin-inline: 100px;">
+                    </div>
+                </div>
                 <div id="popup4" class="popup-overlay">
                     <span class="close-btn" onclick="closePopup('popup4')">BACK</span>
                     <div class="popup-content">
                         <h1>AI-Powered Inventory Management System</h1>
                         <hr style="margin-block: 10px;">
-                        <p style="margin-block: 40px;"><img src="assets\images\5-Ways-Your-Distributors-can-Manage-their-Inventory-Better-768x429-1.webp" alt="assets\images\images.jpg" style="width: 350px; border-radius: 50px;  float: right;">Efficient inventory management is crucial for small businesses to reduce waste, optimize stock levels, and improve profitability. To address this challenge, I developed an AI-powered inventory management system prototype that leverages machine learning to forecast inventory needs and automate replenishment processes. This system is designed to help businesses maintain optimal stock levels, minimize storage costs, and prevent stockouts.</p>
+                        <p style="margin-block: 40px;"><img src="assets\images\5-Ways-Your-Distributors-can-Manage-their-Inventory-Better-768x429-1.webp" alt="assets\images\images.jpg" style="width: 350px;   float: right;">Efficient inventory management is crucial for small businesses to reduce waste, optimize stock levels, and improve profitability. To address this challenge, I developed an AI-powered inventory management system prototype that leverages machine learning to forecast inventory needs and automate replenishment processes. This system is designed to help businesses maintain optimal stock levels, minimize storage costs, and prevent stockouts.</p>
                         <h3>1. Problem Statement</h3>
                         <p>Small businesses often face challenges in managing inventory efficiently due to fluctuating demand patterns, limited storage space, and lack of analytical tools. This often results in overstocking or stockouts, impacting business operations and profitability. The goal of this system is to provide an AI-driven solution to predict inventory requirements accurately and enable data-driven decision-making.</p>
                         <h3>2. Key Features of the System</h3>
@@ -420,7 +508,7 @@
                             <li><strong>Vendor Integration: </strong>Seamlessly connect with suppliers to automate restocking processes.</li>
                             <li><strong>Interactive Dashboard: </strong>Provide a user-friendly interface to monitor inventory levels, trends, and forecast accuracy.</li>
                         </ul>
-                        <img src="assets\images\Inventory-Control-Management-System.jpg" alt="assets\images\download (3).png" style="border-radius: 20px; height: 300px; margin-inline: 300px;">
+                        <img src="assets\images\Inventory-Control-Management-System.jpg" alt="assets\images\download (3).png" style=" height: 300px; margin-inline: 300px;">
                         <h3>3. Data Collection and Preprocessing</h3>
                         <p><strong>Data Sources:</strong>Historical sales data, vendor lead times, seasonal trends, and product-specific information.</p>
                         <p><strong>Preprocessing Steps</strong> </p>
@@ -443,15 +531,15 @@
                         <p><strong>Visualizations:</strong></p>
                         <ul>
                             <li>The line chart illustrates the total sales over time, spanning from January 2023 to July 2023. The chart depicts a fluctuating trend with several peaks and troughs. Notably, there is a significant spike in sales around March 2023, followed by a decline and subsequent stabilization. The shaded area around the line likely represents the confidence interval or standard deviation, indicating the variability in sales data. Overall, the chart provides a visual summary of sales performance during the specified period.</li>
-                            <img src="assets\images\download (5).png" alt="image" style="margin-inline: 60px; border-radius: 50px;">
+                            <img src="assets\images\download (5).png" alt="image" style="margin-inline: 60px; ">
                             <li>The bar chart presents the total sales for each product category. Coffee emerges as the top-selling category, with a significantly higher sales volume compared to others. Bakery and Tea also exhibit notable sales figures. On the other hand, Flavours and Loose Tea appear to have the lowest sales. This visualization provides a clear overview of the sales distribution across different product categories, highlighting the relative performance of each.</li>
-                            <img src="assets\images\download (13).png" alt="assets\images\download (13).png" style="margin-inline: 150px; border-radius: 25px; width: 600px;">
+                            <img src="assets\images\download (13).png" alt="assets\images\download (13).png" style="margin-inline: 150px;  width: 600px;">
                             <li>The pie chart illustrates the total sales distribution across three store locations: Lower Manhattan, Astoria, and Hell's Kitchen. Lower Manhattan and Astoria each contribute around 33% to the overall sales, with a slight edge going to Hell's Kitchen at 33.8%. This visualization effectively highlights the relative contribution of each location to the total sales, revealing a near-equal distribution among the three stores.</li>
-                            <img src="assets\images\download (12).png" alt="assets\images\download (12).png" style="border-radius: 25px; width: 380px; margin-inline: 250px;">
+                            <img src="assets\images\download (12).png" alt="assets\images\download (12).png" style=" width: 380px; margin-inline: 250px;">
                             <li>The horizontal bar chart presents the total sales for each product type. Biscotti and Brewed Chai tea emerge as the top-selling categories, with significantly higher sales volumes compared to others. On the other hand, Sugar-free syrup appears to have the lowest sales. This visualization provides a clear overview of the sales distribution across different product types, highlighting the relative performance of each.</li>
-                            <img src="assets\images\download (14).png" alt="assets\images\download (14).png" style="width: 700px; border-radius: 25px; margin-inline: 90px;">
+                            <img src="assets\images\download (14).png" alt="assets\images\download (14).png" style="width: 700px;  margin-inline: 90px;">
                             <li>The pie chart illustrates the total sales distribution across four product sizes: Small, Regular, Large, and Not Defined. Large and Not Defined sizes contribute the most to the overall sales, with 34.1% and 30.7%, respectively. Regular size accounts for 28.6% of the sales, while Small size has the lowest contribution at 6.6%. This visualization effectively highlights the relative contribution of each size to the total sales, revealing that larger sizes and those without defined size are the most popular among customers.</li>
-                            <img src="assets\images\download (15).png" alt="assets\images\download (15).png"style="width: 380px; margin-inline: 250px; border-radius: 25px;">
+                            <img src="assets\images\download (15).png" alt="assets\images\download (15).png"style="width: 380px; margin-inline: 250px; ">
                         </ul>
                         <h3>5. Model Selection and Training</h3>
                         <p><strong>Algorithms Used:</strong></p>
@@ -459,13 +547,13 @@
                             <li><strong>Time Series Forecasting:</strong> ARIMA and LSTM for demand prediction.</li>
                             <li><strong>Classification Models:</strong> Logistic regression to identify high-priority restocking items.</li>
                             <li><strong>Optimization Models:</strong> Linear programming for inventory level optimization.</li>
-                            <img src="assets\images\download (16).png" alt="assets\images\download (16).png" style="width: 700px; border-radius: 25px; margin-inline: 90px;">
+                            <img src="assets\images\download (16).png" alt="assets\images\download (16).png" style="width: 700px;  margin-inline: 90px;">
                         </ul>
                         <p><strong>Evaluation Metrics:</strong></p>
                         <ul>
                             <li><strong>Forecasting Accuracy:</strong> Measured using RMSE and MAE.</li>
                             <li><strong>Optimization Efficiency:</strong> Evaluated based on cost savings and reduced stockouts.</li>
-                            <img src="assets\images\download (18).png" alt="assets\images\download (16).png" style="width: 700px; margin-inline: 90px;border-radius: 25px;">
+                            <img src="assets\images\download (18).png" alt="assets\images\download (16).png" style="width: 700px; margin-inline: 90px;">
                         </ul>
                        <h2>Results and Key Takeaways</h2>
                        <ul>
@@ -487,7 +575,7 @@
                             <li><strong>Advanced Vendor Collaboration:</strong> Add predictive analytics for vendor lead times and stock availability.</li>
                         </ul>
                         <h2>Conclusion</h2>
-                        <p><img src="assets\images\what-is-inventory-management-techniques-practices-benefits-.png" alt="assets\images\images.jpg" style="width: 350px; border-radius: 25px;  float: right;">This AI-powered inventory management system is a comprehensive solution for small businesses looking to enhance their inventory processes. By leveraging machine learning, the system provides actionable insights, automates decision-making, and minimizes operational inefficiencies.<br> The project demonstrates my ability to integrate AI into practical applications, delivering solutions that drive tangible results.</p>
+                        <p><img src="assets\images\what-is-inventory-management-techniques-practices-benefits-.png" alt="assets\images\images.jpg" style="width: 350px;   float: right;">This AI-powered inventory management system is a comprehensive solution for small businesses looking to enhance their inventory processes. By leveraging machine learning, the system provides actionable insights, automates decision-making, and minimizes operational inefficiencies.<br> The project demonstrates my ability to integrate AI into practical applications, delivering solutions that drive tangible results.</p>
                         <p>Check out the live demo and GitHub repository<button onclick="window.location.href='https://github.com/Nikhil2349/Inventory-management-analysis'">Github Repo</button></p>
                     </div>
 

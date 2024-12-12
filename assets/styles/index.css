@@ -12,14 +12,11 @@ html {
     scroll-behavior: smooth;
     background-color: black;
 }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
 body {
     font-family: 'Poppins', sans-serif;
     width: 100%;
@@ -27,7 +24,6 @@ body {
     overflow-x: hidden; /* Hide any potential horizontal scrollbars */
     overflow-y: auto;
 }
-
 header {
     color: white;
     padding: 15px;
@@ -36,8 +32,6 @@ header {
     width: 100%;
     z-index: 1000;    
 }
-
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -45,14 +39,10 @@ nav {
     /* max-width: 1200px; */
     margin-inline: 30px;
 }
-
-
 /* Optional: Style for when scrolling */
 body.scrolled header {
     background: black; /* Solid background when scrolled */
-
 }
-
 .logo a {
     color: white;
     text-decoration: none;
@@ -60,7 +50,6 @@ body.scrolled header {
     font-family: 'Courier New', Courier, monospace;
     margin-left: 20px;
 }
-
 .nav-links {
     background-color: black;
     list-style: none;
@@ -71,7 +60,6 @@ body.scrolled header {
     padding: 10px 2px;
     margin-right: 20px;
 }
-
 .nav-link {
     color: white;
     text-decoration: none;
@@ -79,28 +67,23 @@ body.scrolled header {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     padding: 10px 20px;
-  }
-  
-  .nav-link:hover {
+}
+.nav-link:hover {
     background-color: orange;
     color: black;
     border-radius: 50px;
-  }
-  
-  .nav-link.active {
+}
+.nav-link.active {
     background-color: orange;
     color: black;
     border-radius: 50px;
-  }
-
-
+}
 .burger {
     display: none;
     cursor: pointer;
     flex-direction: column;
     gap: 5px;
 }
-
 .burger div {
     width: 25px;
     height: 3px;
@@ -108,16 +91,8 @@ body.scrolled header {
     transition: all 0.3s ease;
 }
 
-/* Responsive */
-@media (max-width: 508px) {
-    
-    .logo a{
-        font-size: 14px;
-    }
-    nav {
-        display: flex;
-        align-items: center;
-    }
+/* Media queries for smaller screens (max-width: 700px) */
+@media screen and (max-width: 700px) {
     .nav-links {
         display: none; /* Hide the nav links by default */
         position: fixed;
@@ -130,6 +105,7 @@ body.scrolled header {
         align-items: center;
         margin: 0;
         padding: 20px 0;
+        box-shadow: none;
     }
 
     .nav-links.active {
@@ -142,7 +118,6 @@ body.scrolled header {
         font-size: 18px;
         border: none;
     }
-
     .burger {
         display: flex; /* Show the burger menu on small screens */
         border: none;
@@ -203,6 +178,10 @@ body.scrolled header {
     font-size: 40px;
     font-style: italic;
 }
+.text-content h1 span {
+    font-size: 55px;
+    color: rgb(184, 122, 8);
+}
 
 .text-content p {
     font-size: 17px;
@@ -221,25 +200,7 @@ body.scrolled header {
 
 
 
-@media (max-width: 768px) {
-    #home {
-        flex-direction: column;
-        text-align: center;
-    }
 
-    .home-content {
-        flex-direction: column;
-    }
-
-    .text-content {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .image-content img {
-        width: 300px;
-    }
-}
 
 /* intro Section */
 #intro {
@@ -298,17 +259,6 @@ body.scrolled header {
 
 
 
-/* Define the fadeInUp animation */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 svg{
     overflow: auto;
@@ -328,28 +278,7 @@ svg{
     z-index: 1;
 }
 
-@media (max-width: 768px) {
-    #intro {
-        flex-direction: column;
-        text-align: center;
-    }
 
-    .intro-content {
-        flex-direction: column;
-    }
-
-    .intro-image {
-        margin-bottom: 20px;
-    }
-
-    .intro-image img {
-        max-width: 250px; /* Adjust for smaller screens */
-    }
-
-    .intro-text {
-        max-width: 100%;
-    }
-}
 
 
 
@@ -488,18 +417,7 @@ svg{
     color: white;
     text-align: center;
 }
-/* Responsive */
-@media (max-width: 508px) {
-    #skills {
-        padding: 5%;
-        margin-bottom: 8%;
-    }
-    .first {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
+
 
 
   

@@ -104,7 +104,25 @@ particlesJS('particles-js', {
     "retina_detect": true
     });
 
+    document.addEventListener('DOMContentLoaded', function () {
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        const navLinkItems = document.querySelectorAll('.nav-link');
 
+        // Toggle the menu visibility when the burger is clicked
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active'); // Toggle the class 'active' on nav-links
+            burger.classList.toggle('active'); // Optional: Toggle burger icon animation
+        });
+
+        // Close the menu and navigate to the link when a nav link is clicked
+        navLinkItems.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active'); // Close the menu
+                burger.classList.remove('active'); // Optionally remove burger icon animation
+            });
+        });
+    });
     const burger = document.querySelector('.burger');
     const navLinks = document.querySelector('.nav-links');
 
