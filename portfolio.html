@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Gundluru - projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Assets/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#intro">Intro</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <span class="mobile-name">Nikhil Gundluru</span>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <h2>Hi, I'm Nikhil.</h2>
+        <h2> a <span id="typing-text"></span></h2>
+        <p>Aspiring Data Scientist skilled in Python, SQL, and Power BI, passionate about solving real-world problems using data-driven insights.</p>
+        <hr>
+        <img src="Assets/images/mygib.png" alt="">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/nikhil-gundluru/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/NikhilGundluru"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/ngundluru"><i class="fab fa-github"></i></a>
+        </div>
+    </section>
+
+    <section id="intro">
+        <div class="whole">
+            <img src="Assets/images/my gib.jpg" alt="">
+            <div>
+                <h3>I'm a AI/ML Engineer working remotely from Bangalore, India.</h3>
+                <p>My journey into data science began at IIIT RK Valley, where I developed a strong interest in understanding how data can drive real-world decisions. I've consistently challenged myself to go beyond academics by exploring new concepts in AI, machine learning, and business analytics.<br> <br>My internship experience further fueled my passion, exposing me to practical applications and reinforcing my desire to build intelligent systems. I stay committed to continuous learning through courses, hands-on practice, and staying updated with industry trends. Moving forward, I aim to contribute to AI-driven innovations that solve impactful business problems and create value.</p>
+            </div>
+        </div>
+        <div class="timeline">
+            <div class="event event-right">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>B.tech in Computer Science and Engineering</h3>
+                    <p>IIIT RK Valley <b>2020 - 2024</b></p>
+                </div>
+            </div>
+            <div class="event event-left">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>Data Science Intern</h3>
+                    <p>Feynn Labs <b>Jul 2024 - Oct 2024</b></p>
+                </div>
+            </div>
+            <div class="event event-right">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>AI/ML Engineer Intern</h3>
+                    <p>Alden Global Value Advisors <b>Dec 2024 - Present</b></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="interests">
+        <h2>My Interests</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/128/12489/12489798.png" alt="">
+                <h4>Data Science</h4>
+                <p>Passionate about extracting actionable insights from complex data to drive informed decision-making.</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/128/4616/4616790.png" alt="">
+                <h4>Artificial Intelligence</h4>
+                <p>Fascinated by building intelligent systems that mimic human thinking and solve real-world problems.</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/128/9716/9716596.png" alt="">
+                <h4>Machine Learning</h4>
+                <p>Continuously exploring algorithms that enable systems to learn from data and improve over time.</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/128/16921/16921785.png" alt="">
+                <h4>Generative AI</h4>
+                <p>Enthusiastic about building models that create text, images, and ideas, blending creativity with automation.</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/128/6361/6361033.png" alt="">
+                <h4>Deep Learning</h4>
+                <p>Engaged in leveraging neural networks to handle complex tasks like image and speech recognition.</p>
+            </div>
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/128/5760/5760802.png" alt="">
+                <h4>Computer Vision</h4>
+                <p>Interested in enabling machines to interpret and understand visual information with precision.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>PROJECTS</h2>
+        <p>A glimpse into my work</p>
+        <div class="button-container">
+            <button class="btn active" onclick="filter('all')">Show All</button>
+            <button class="btn" onclick="filter('Data Science')">Data Science</button>
+            <button class="btn" onclick="filter('Generative Ai')">Generative Ai</button>
+            <button class="btn" onclick="filter('Deep Learning')">Deep Learning</button>
+            <button class="btn" onclick="filter('Visulalization')">Visulalization</button>
+        </div>
+        <div class="projects-container">
+            <div class="project-card" data-category="Data Science" data-id="1">
+                <img src="Assets/images/ev market.jpeg" alt="">
+                <h4>Electric Vehicle Market Analysis</h4>
+                <div class="tags">
+                    <span>-Python</span>
+                    <span>-Time Series</span>
+                    <span>-Power BI</span>
+                </div>
+            </div>
+            <div class="project-card" data-category="Data Science" data-id="2">
+                <img src="Assets/images/house price prediction.png" alt="">
+                <h4>House Price Prediction</h4>
+                <div class="tags">
+                    <span>-Regression</span>
+                    <span>-Random Forest</span>
+                    <span>-Flask</span>
+                </div>
+            </div>
+            <div class="project-card" data-category="Data Science" data-id="3">
+                <img src="Assets/images/inventory management.png" alt="">
+                <h4>Inventory Management</h4>
+                <div class="tags">
+                    <span>-Python</span>
+                    <span>-Time Series</span>
+                    <span>-Power BI</span>
+                </div>
+            </div>
+            <div class="project-card" data-category="Data Science" data-id="4">
+                <img src="Assets/images/Gemini_Generated_Image_lrr78glrr78glrr7.jpeg" alt="">
+                <h4>Twitter Sentiment Analysis</h4>
+                <div class="tags">
+                    <span>-Twitter API</span>
+                    <span>-Tfidf Vectorizer</span>
+                    <span>-NLTK</span>
+                </div>
+            </div>
+            <div class="project-card" data-category="Visulalization" data-id="5">
+                <img src="Assets/images/Gemini_Generated_Image_n3fu4gn3fu4gn3fu.jpeg" alt="">
+                <h4 style="margin-bottom: 0;">Electric Vehicle Market Analysis Dashboard</h4>
+                <div class="tags">
+                    <span>-Power BI</span>
+                    <span>-Excel</span>
+                    <span>-Power Query</span>
+                </div>
+            </div>
+            <div class="project-card" data-category="Visulalization" data-id="6">
+                <img src="Assets/images/Gemini_Generated_Image_2fl6ez2fl6ez2fl6.jpeg" alt="">
+                <h4>Zomato Sales Analysis Dashboard</h4>
+                <div class="tags">
+                    <span>-Power BI</span>
+                    <span>-Excel</span>
+                    <span>-Power Query</span>
+                </div>
+            </div>
+            <div class="project-card" data-category="Data Science" data-id="7">
+                <img src="Assets/images/Gemini_Generated_Image_9vs0ky9vs0ky9vs0.jpeg" alt="">
+                <h4>Credit Card Fraud Detection</h4>
+                <div class="tags">
+                    <span>-Random Forest</span>
+                    <span>-XGBoost</span>
+                </div>
+            </div>
+        </div>
+        <div class="popup-conatiner">
+            <div class="popup-overlay" id="popup-card-1">
+                <div class="popup">
+                    <button class="close-btn">Close</button>
+                  <img src="Assets/images/ev market.jpeg" alt="">
+                  <h4 style="margin-block: 0;">EV Market Segmentation - India</h4>
+              
+                  <p><b>📄 Project Overview</b><br>
+                    This project analyzes and forecasts the adoption trends of Electric Vehicles (EVs) in India. It identifies state-wise distributions, EV adoption growth, and the number of EV manufacturers, while providing predictive insights into the future of the EV market using visualizations and time series forecasting.
+                  </p>
+              
+                  <p><b>📝 Datasets</b><br>
+                    <b>State-wise EV Distribution Data</b> (<i>State wise data.csv</i>): Distribution of vehicle types and charging stations in Indian states.<br>
+                    <b>Yearly EV Growth Data</b> (<i>Year wise Growth of EV.csv</i>): Annual EV adoption counts.<br>
+                    <b>EV Manufacturer Data</b> (<i>EV Maker by Place.csv</i>): List of EV manufacturers and their locations.
+                  </p>
+              
+                  <p><b>🔍 Analysis</b><br>
+                    <b>1. Exploratory Data Analysis (EDA):</b> Loaded and inspected datasets for structure and types.<br>
+                    <b>2. Visualizations:</b><br>
+                    - Stacked bar charts for state-wise vehicle distribution<br>
+                    - Bar charts for vehicle type totals and manufacturers by state<br>
+                    - Pie chart for electric vs. non-electric vehicles<br>
+                    - Line plot for yearly EV adoption trends<br>
+                    - Bar chart for charging infrastructure distribution
+                  </p>
+              
+                  <p><b>📈 Forecasting</b><br>
+                    Applied ARIMA model to forecast future EV adoption based on historical data. Compared historical and predicted values using line plots.
+                  </p>
+              
+                  <p><b>✅ Tools and Best Practices Used</b><br>
+                    Used Git for version control, modular code structure, robust data validation, and clear documentation. Applied reproducible EDA, best practices in visualization, and model evaluation with cross-validation.
+                  </p>
+
+                  <div class="tags" style="margin-top:1rem;">
+                    <span>Python</span>
+                    <span>pandas</span>
+                    <span>numpy</span>
+                    <span>matplotlib</span>
+                    <span>seaborn</span>
+                    <span>statsmodels</span>
+                    <span>ARIMA</span>
+                    <span>Data Visualization</span>
+                    <span>Forecasting</span>
+                  </div>
+              
+                  <p><b>📊 Results & Insights</b><br>
+                    Regional disparities in EV adoption were revealed, with certain states leading. Growth is trending upwards, especially in recent years. Charging station distribution correlates with EV adoption. The ARIMA model provided reliable future projections for EV adoption and market expansion.
+                  </p>
+              
+                  <p><b>🚀 Future Scope</b><br>
+                    Integrate external factors (government incentives, infrastructure, economic indicators) for enhanced forecasting. Expand to city-level or urban/rural segmentation. Use real-time data for dynamic model updates.
+                  </p>
+              
+                  <a href="https://github.com/Nikhil2349/EV-Market-Segmentation" target="_blank" class="view-code-btn">GitHub</a>
+                </div>
+              </div>
+            <div class="popup-overlay" id="popup-card-2">
+                <div class="popup">
+                  <img src="Assets/images/house price prediction.png" alt="">
+                  <h4 style="margin-block: 0;">House Price Prediction (Bengaluru)</h4>
+              
+                  <p><b>📄 Project Overview</b><br>
+                  The House Price Prediction project aims to provide a reliable and intelligent system to estimate property prices in Bengaluru based on user-input parameters. This end-to-end solution integrates data preprocessing, model development, evaluation, and deployment using a web-based interface. The goal is to bridge the gap between machine learning models and real-world usability, especially for potential homebuyers, real estate investors, and agents looking for accurate price insights.
+                  </p>
+              
+                  <p><b>🔍 Data Exploration and Cleaning</b><br>
+                  The project began by analyzing the Bengaluru_House_Data.csv dataset, which contained over 1,300 entries of residential properties. The initial step involved cleaning inconsistent values in the dataset, such as variations in room type naming conventions like "2 Bedroom" vs. "2 BHK", removing outliers in square footage, and addressing missing values through statistical imputation. Exploratory Data Analysis (EDA) using libraries like Pandas, Matplotlib, and Seaborn helped uncover key patterns such as price trends across different localities, distributions of bedrooms, and relationships between square footage and pricing. This foundational understanding guided the downstream modeling process.
+                  </p>
+              
+                  <p><b>⚙️ Feature Engineering and Preprocessing</b><br>
+                  Once the data was cleaned, the next phase involved engineering new and more meaningful features to improve model accuracy. One of the critical features introduced was "price per square foot", a normalized metric that helped compare property values across locations. Additional derived metrics such as "BHK to bathroom ratio" and "total rooms" were added to capture architectural efficiency. Categorical variables such as "area type" and "availability" were one-hot encoded, while location-based sparsity was tackled by grouping under-represented neighborhoods into an “other” category. A complete preprocessing pipeline was developed to automate these steps for any new incoming data during deployment.
+                  </p>
+              
+                  <p><b>🧠 Model Selection and Training</b><br>
+                  A range of regression models was explored, including Linear Regression, Lasso, Ridge, and Random Forest Regressor. GridSearchCV was used to fine-tune hyperparameters and select the best model based on evaluation metrics like Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and R² score. The Random Forest model demonstrated the best performance, achieving the lowest MAE of approximately ₹16.55 Lakhs and an R² score of 0.8384. Cross-validation techniques were employed to validate model performance and reduce overfitting, ensuring the predictions were generalizable to unseen data.
+                  </p>
+              
+                  <p><b>🧪 Model Evaluation and Interpretability</b><br>
+                  The models were extensively evaluated not only through error metrics but also through visual residual plots and feature importance analysis. This helped interpret which features contributed most to the final predictions. It was observed that location and square footage had the highest impact on price prediction. Outliers and inconsistencies identified through residual plots were either treated or excluded to improve overall model performance. These evaluations allowed the model to make more informed and trustworthy predictions.
+                  </p>
+              
+                  <p><b>🌐 Web Application Deployment</b><br>
+                  The trained model was deployed using Flask, a lightweight web framework in Python. A user-friendly frontend was developed using HTML and CSS, allowing users to input parameters such as location, number of bedrooms, bathrooms, and square footage. AJAX was used to send asynchronous requests from the frontend to the Flask backend, ensuring a seamless user experience without page reloads. The deployed app provided real-time predictions based on user input, making the model not just a backend tool but a complete interactive solution. The architecture is scalable and can be containerized for deployment on platforms like Heroku or Render.
+                  </p>
+              
+                  <p><b>📈 Business Impact and Usability</b><br>
+                  This project offers tremendous value to the real estate industry by equipping users with data-driven insights for buying or selling property. It can shorten negotiation cycles, reduce price uncertainty, and assist property developers in benchmarking prices competitively. The modular and scalable design ensures that the system can be easily adapted for different cities or integrated into larger property listing platforms.
+                  </p>
+
+                  <p><b>🧰 Technology Stack</b><br>
+                  The project leveraged Python for data processing and modeling, using libraries like Pandas, NumPy, Matplotlib, Seaborn, and scikit-learn. The web application was built using Flask for the backend and HTML/CSS with AJAX for the frontend. Jupyter Notebook was used throughout the development for experimentation and visualization.
+                  </p>
+              
+                  <div class="tags" style="margin-top:1rem;">
+                    <span>Python</span>
+                    <span>Pandas</span>
+                    <span>NumPy</span>
+                    <span>scikit-learn</span>
+                    <span>Matplotlib</span>
+                    <span>Seaborn</span>
+                    <span>Flask</span>
+                    <span>HTML/CSS</span>
+                    <span>AJAX</span>
+                  </div>
+                  <p><b>✅ Tools and Best Practices Used</b><br>
+                  Best practices included the use of version control (Git), modular coding for maintainability, use of pipelines for preprocessing, and thorough documentation. Hyperparameter tuning via GridSearchCV and robust model validation using k-fold cross-validation contributed to strong model performance and reliability. RESTful principles guided the API design for frontend-backend interaction.
+                  </p>
+                  <a href="https://github.com/Nikhil2349/House-Price-Prediction" target="_blank">GitHub</a>
+                </div>
+              </div>
+              <div class="popup-overlay" id="popup-card-3">
+                <div class="popup">
+                  <img src="Assets/images/inventory management.png" alt="">
+                  <h4 style="margin-block: 0;">Inventory Management Analysis</h4>
+              
+                  <p><b>📄 Project Overview</b><br>
+                    This project focuses on forecasting inventory needs using transactional sales data. The objective is to analyze historical purchase patterns and predict future demand using time series forecasting and machine learning techniques, thereby enhancing inventory planning and supply chain efficiency.
+                  </p>
+              
+                  <p><b>📁 Dataset</b><br>
+                    Transactional records from retail sales, including product categories, sales amounts, quantities, and seasonal trends.<br>
+                  </p>
+              
+                  <p><b>🧹 Data Preprocessing</b><br>
+                    Parsed transaction_date into datetime objects for time-based analysis. Engineered features including year, month, and season. Removed non-essential columns, handled missing values, validated data types, and generated summary statistics.
+                  </p>
+              
+                  <p><b>📊 Exploratory Data Analysis (EDA)</b><br>
+                    Visualizations uncovered seasonal demand trends and product-specific sales patterns. Charts illustrated sales distributions across locations, timeframes, and product types to support inventory decisions.
+                  </p>
+              
+                  <p><b>🧠 Machine Learning Techniques</b><br>
+                    <b>⏱ Time Series Forecasting:</b> Applied ARIMA and LSTM models to forecast future sales trends and inventory demand.<br>
+                    <b>📉 Demand Prediction:</b> Forecasting identified high-demand seasons and products, guiding inventory stocking strategies.
+                  </p>
+
+                  <p><b>✅ Tools and Best Practices Used</b><br>
+                    Used Git for version control, modular code structure, robust preprocessing pipelines, and thorough documentation. Applied hyperparameter tuning, cross-validation, and clear visualizations for model validation and interpretation.
+                  </p>
+
+                  <div class="tags" style="margin-top:1rem;">
+                    <span>Python</span>
+                    <span>pandas</span>
+                    <span>numpy</span>
+                    <span>matplotlib</span>
+                    <span>seaborn</span>
+                    <span>plotly</span>
+                    <span>statsmodels</span>
+                    <span>scikit-learn</span>
+                    <span>tensorflow</span>
+                    <span>keras</span>
+                    <span>ARIMA</span>
+                    <span>LSTM</span>
+                  </div>
+              
+                  <p><b>🚀 Results & Insights</b><br>
+                    Models enabled accurate forecasting of inventory needs by capturing seasonality and trends. Fall season showed peak sales, especially for electronics and apparel. The models can be integrated into retail systems to dynamically adjust inventory levels and reduce overstock or stockouts.
+                  </p>
+              
+                  <p><b>📈 Future Scope</b><br>
+                    Potential extensions: integrate real-time inventory tracking, expand dataset across years, deploy into dashboards, and incorporate external factors like holidays, promotions, or economic indicators.
+                  </p>
+              
+                  <a href="https://github.com/Nikhil2349/Inventory-management-analysis" target="_blank" class="view-code-btn">GitHub</a>
+                </div>
+              </div>
+            <div class="popup-overlay" id="popup-card-4">
+                <div class="popup">
+                  <button class="close-btn">Close</button>
+                  <img src="Assets/images/Gemini_Generated_Image_lrr78glrr78glrr7.jpeg" alt="">
+                  <h4 style="margin-block: 0;">Twitter Sentiment Analysis on IPL Content</h4>
+              
+                  <p><b>📄 Project Overview</b><br>
+                    This project analyzes public sentiment around the Indian Premier League (IPL) by classifying tweets as Positive, Negative, or Neutral. Using NLP and machine learning, it uncovers audience perception and engagement related to IPL teams, players, and events.
+                  </p>
+              
+                  <p><b>📁 Dataset</b><br>
+                    Tweets were collected using the Twikit library with the query “ipl lang:en”, capturing English-language tweets and metadata such as Username, Location, Likes, Tweet Text, Month, and Year. This enabled both textual and temporal sentiment analysis.
+                  </p>
+              
+                  <p><b>⚙️ Data Preprocessing</b><br>
+                    Applied a rigorous pipeline: removed missing values, formatted dates, cleaned tweet content (removing emojis, URLs, special characters), lowercased, tokenized, and stemmed tweets using nltk.
+                  </p>
+              
+                  <p><b>📊 Exploratory Data Analysis (EDA)</b><br>
+                    Used WordClouds for frequent words, pie charts for sentiment distribution, bar charts for geographic sentiment, and boxplots for Likes vs. sentiment polarity.
+                  </p>
+              
+                  <p><b>🧠 Sentiment Classification</b><br>
+                    Used TextBlob polarity for initial unsupervised labeling, then trained supervised ML models for classification.
+                  </p>
+              
+                  <p><b>📈 Model Building & Evaluation</b><br>
+                    Vectorized text with TfidfVectorizer (n-grams). Trained Logistic Regression (74.58%), Random Forest (78.89%), and Naive Bayes (70.72%). GridSearchCV and cross-validation were used. Logistic Regression had the best cross-val accuracy (79.61%).
+                  </p>
+              
+                  <p><b>🏁 Results</b><br>
+                    Random Forest achieved the highest accuracy. Visualizations revealed trends in tweet engagement and sentiment by location.
+                  </p>
+              
+                  <p><b>🚀 Future Scope</b><br>
+                    Future work could include using hashtags, mentions, and retweet counts, integrating LSTM/BERT for better predictions, and topic modeling for team/player-based insights.
+                  </p>
+              
+                  <p><b>🧰 Technology Stack</b><br>
+                    Python, pandas, numpy, matplotlib, seaborn, wordcloud, nltk, TextBlob, TfidfVectorizer, scikit-learn, Twikit
+                  </p>
+
+                  <div class="tags" style="margin-top:1rem;">
+                    <span>Python</span>
+                    <span>pandas</span>
+                    <span>nltk</span>
+                    <span>TextBlob</span>
+                    <span>scikit-learn</span>
+                    <span>Twikit</span>
+                    <span>matplotlib</span>
+                    <span>seaborn</span>
+                    <span>wordcloud</span>
+                  </div>
+
+                  <p><b>✅ Tools and Best Practices Used</b><br>
+                    Used version control (Git), modular code structure, robust data preprocessing pipelines, and thorough documentation. Applied hyperparameter tuning (GridSearchCV), cross-validation, and clear visualizations for model validation and interpretation. Ensured reproducibility and ethical data handling throughout.
+                  </p>
+
+                  <a href="Assets/Code/Twitter Sentiment Analysis on IPL Content.zip" target="_blank" class="view-code-btn">GitHub</a>
+
+                </div>
+              </div>
+            <div class="popup-overlay" id="popup-card-5">
+                <div class="popup">
+                  <button class="close-btn">Close</button>
+                  <img src="Assets/images/Gemini_Generated_Image_n3fu4gn3fu4gn3fu.jpeg" alt="">
+                  <h4 style="margin-block: 0;">EV Market Analysis Dashboard</h4>
+                  <p>
+                    Designed an interactive dashboard to visualize key metrics and trends in the electric vehicle market, empowering business users with actionable insights.
+                  </p>
+                  <ul style="list-style: none; padding-left: 0; margin: 0;">
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i> <b>Data Modeling:</b> Structured raw data for optimal dashboard performance and clarity.</li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i> <b>Visualization:</b> Built dynamic charts and filters for year-over-year growth, market share, and feature analysis.</li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i> <b>Stakeholder Enablement:</b> Delivered a user-friendly interface for non-technical users to explore data.</li>
+                  </ul>
+                  <div class="tags">
+                    <span>-Power BI</span>
+                    <span>-Excel</span>
+                    <span>-Power Query</span>
+                    <span>-Visualization</span>
+                  </div>
+                </div>
+            </div>
+            <div class="popup-overlay" id="popup-card-6">
+                <div class="popup">
+                  <img src="Assets/images/Gemini_Generated_Image_2fl6ez2fl6ez2fl6.jpeg" alt="">
+                  <h4 style="margin-block: 0;">Zomato Sales Analysis Dashboard</h4>
+                  <p>
+                    Developed a business intelligence dashboard to analyze Zomato sales data, uncovering trends and driving data-informed decisions for restaurant partners.
+                  </p>
+                  <ul style="list-style: none; padding-left: 0; margin: 0;">
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i> <b>Data Cleaning:</b> Processed and transformed raw sales data for reporting.</li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i> <b>Trend Analysis:</b> Visualized daily/weekly sales, top-performing dishes, and customer segments.</li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i> <b>Insights:</b> Provided actionable recommendations for sales growth and customer retention.</li>
+                  </ul>
+                  <div class="tags">
+                    <span>-Power BI</span>
+                    <span>-Excel</span>
+                    <span>-Power Query</span>
+                    <span>-Sales Analytics</span>
+                  </div>
+                </div>
+            </div>
+            <div class="popup-overlay" id="popup-card-7">
+                <div class="popup">
+                  <button class="close-btn">Close</button>
+                  <img src="Assets/images/Gemini_Generated_Image_9vs0ky9vs0ky9vs0.jpeg" alt="">
+                  <h4 style="margin-block: 0;">Credit Card Fraud Detection</h4>
+              
+                  <p><b>📄 Project Overview</b><br>
+                    This project focuses on detecting fraudulent credit card transactions using machine learning models. The goal is to classify each transaction as fraudulent or normal, providing a robust solution for real-world fraud detection.
+                  </p>
+              
+                  <p><b>📝 Dataset</b><br>
+                    The dataset used in this project contains anonymized transaction details with key columns. The Time column represents the number of seconds since the first transaction, capturing the temporal aspect of each transaction. The Amount column indicates the transaction amount, providing insights into the scale of each transaction. Finally, the Class column labels the transaction as either fraudulent (1) or normal (0), serving as the target variable for the machine learning models.
+                  </p>
+              
+                  <p><b>🔍 Exploratory Data Analysis (EDA)</b><br>
+                    <b>1. Data Distribution:</b> Visualized class imbalance between fraud and non-fraud.<br>
+                    <b>2. Transaction Amount Analysis:</b> Used histograms, boxplots, and scatter plots to analyze transaction amounts and trends.<br>
+                    <b>3. Correlation Analysis:</b> Generated heatmaps to explore feature correlations.
+                  </p>
+              
+                  <p><b>🤖 Model Training and Evaluation</b><br>
+                    <b>Logistic Regression:</b> Baseline model with reasonable performance.<br>
+                    <b>Random Forest Classifier:</b> Improved precision and recall.<br>
+                    <b>XGBoost Classifier:</b> Achieved the highest accuracy, precision, and recall; selected as the best model.
+                  </p>
+              
+                  <p><b>📊 Model Comparison</b><br>
+                    Models were evaluated using accuracy, precision, recall, and ROC curves. XGBoost outperformed others and was chosen for deployment.
+                  </p>
+
+                  <p><b>✅ Tools and Best Practices Used</b><br>
+                    Used Git for version control, modular and well-documented code, robust preprocessing, and model validation. Applied hyperparameter tuning, cross-validation, and clear visualizations for interpretability. Provided installation instructions for reproducibility.
+                  </p>
+              
+                  <div class="tags" style="margin-top:1rem;">
+                    <span>Python</span>
+                    <span>pandas</span>
+                    <span>numpy</span>
+                    <span>matplotlib</span>
+                    <span>seaborn</span>
+                    <span>scikit-learn</span>
+                    <span>xgboost</span>
+                    <span>Machine Learning</span>
+                    <span>Fraud Detection</span>
+                  </div>
+                  
+                  <p><b>📈 Conclusion</b><br>
+                    The XGBoost model provided the highest precision and recall, making it well-suited for real-world fraud detection applications.
+                  </p>
+              
+                  <a href="https://github.com/Nikhil2349/Credit-Card-Fraud-Dtetection" target="_blank" class="view-code-btn">GitHub</a>
+                </div>
+              </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact">
+            <img src="Assets/images/tech-startup-founder-recruiter-design_1297153-29623-removebg-preview.png" alt="">
+            <div class="social">
+                <div>
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <h2 style="margin: 0 0 0 10px;">Nikhil Gundluru</h2>
+                </div>
+                <hr>
+                <p>Want to say hi? I’m just a click away ✨</p>
+                <div>
+                    <a href="https://www.linkedin.com/in/nikhil-gundluru-0b2554206/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://x.com/NikhilGundluru" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://github.com/Nikhil2349" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:nikhilgundluru3@gmail.com" target="_blank">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/nikhil._._.g/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                </div>   
+            </div>
+        </div>
+        <p style=" margin-top: 5rem;font-size: 16px;font-family: 'Space Mono', monospace;color: white;text-align: center;">© 2025 Nikhil Gundluru. All rights reserved.</p>
+    </section>
+
+    
+
+    
+
+    <script src="Assets/script.js"></script>    
+</body>
+</html>
