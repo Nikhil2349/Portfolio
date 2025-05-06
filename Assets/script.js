@@ -114,6 +114,15 @@ document.querySelectorAll('.popup-overlay .close-btn').forEach(btn => {
     });
 });
 
+// Close popup when browser back button is clicked
+window.addEventListener('popstate', function() {
+    const activePopup = document.querySelector('.popup-overlay.active');
+    if (activePopup) {
+        activePopup.classList.remove('active');
+        window.history.forward();
+    }
+});
+
 
 
 const burger = document.querySelector('.burger');
