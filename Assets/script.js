@@ -69,68 +69,80 @@ function addNavBlurEffect() {
 
 window.addEventListener('scroll', addNavBlurEffect);
 
-function filter(category) {
-    const buttons = document.querySelectorAll('.button-container .btn');
-    buttons.forEach(button => {
-        button.classList.remove('active');
-        
-        if (button.textContent.toLowerCase().trim() === category.toLowerCase().trim()) {
-            button.classList.add('active');
-        }
-    });
-
-    const projectCards = document.querySelectorAll('.project-card');
-    
-    projectCards.forEach(card => {
-        const cardCategory = card.dataset.category.toLowerCase().replace(/\s/g, '');
-        const filterCategory = category.toLowerCase().replace(/\s/g, '');
-
-        if (filterCategory === 'all' || cardCategory === filterCategory) {
-            card.style.display = 'flex';
-        } else {
-            card.style.display = 'none';
-        }
-    });
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-    const allButton = document.querySelector('.button-container .btn');
-    if (allButton) {
-        allButton.classList.add('active');
+    // Close popup when clicking close button or outside
+    function initPopups() {
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.close-btn') || e.target.classList.contains('popup')) {
+                closePopup();
+            }
+        });
+
+        // Close popup with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closePopup();
+            }
+        });
+
+        // Add click event to project cards
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                e.preventDefault();
+                const popupId = card.getAttribute('data-popup');
+                if (popupId) {
+                    openPopup(popupId);
+                }
+            });
+        });
+
+        // Initialize popups as hidden
+        document.querySelectorAll('.popup').forEach(popup => {
+            popup.style.display = 'none';
+        });
     }
-});
 
-document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('click', function() {
-      const cardId = this.getAttribute('data-id');
-      const popup = document.getElementById(`popup-card-${cardId}`);
-      if (popup) popup.classList.add('active');
-    });
-});
-
-document.querySelectorAll('.popup-overlay .close-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-      this.closest('.popup-overlay').classList.remove('active');
-    });
-});
-
-// Close popup when browser back button is clicked
-window.addEventListener('popstate', function() {
-    const activePopup = document.querySelector('.popup-overlay.active');
-    if (activePopup) {
-        activePopup.classList.remove('active');
-        window.history.forward();
+    function openPopup(popupId) {
+        const popup = document.getElementById(popupId);
+        if (popup) {
+            // Close any open popup first
+            closePopup();
+            
+            // Show new popup
+            document.body.style.overflow = 'hidden';
+            popup.style.display = 'flex';
+            
+            // Trigger reflow for smooth animation
+            void popup.offsetWidth;
+            popup.classList.add('showing');
+        }
     }
+
+    function closePopup() {
+        const popup = document.querySelector('.popup.showing');
+        if (popup) {
+            popup.classList.remove('showing');
+            document.body.style.overflow = 'auto';
+            
+            // Wait for transition to complete before hiding
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 300);
+        }
+    }
+
+    // Initialize carousel and popups when DOM is loaded
+    startCarousel();
+    initPopups();
 });
-
-
 
 const burger = document.querySelector('.burger');
 const navLinks = document.querySelector('nav ul');
 const navItems = document.querySelectorAll('nav ul li a');
 
 burger.addEventListener('click', () => {
-  burger.classList.toggle('active');
+    burger.classList.toggle('active');
+    navLinks.classList.toggle('active');
   navLinks.classList.toggle('active');
 });
 
@@ -143,3 +155,140 @@ navItems.forEach(link => {
 });
 
 
+
+const track = document.querySelector('.projects-track');
+const cards = document.querySelectorAll('.project-card');
+const dotsContainer = document.querySelector('.carousel-dots');
+
+// Carousel configuration
+const visibleCards = 1; // Show 1 card at a time
+const totalCards = cards.length;
+const totalDots = 4; // Fixed number of dots
+const cardsPerDot = Math.ceil(totalCards / totalDots); // Calculate cards per dot
+let currentIndex = 0;
+let isTransitioning = false;
+let carouselInterval;
+
+// Set initial position
+track.style.transform = 'translateX(0%)';
+
+// Create exactly 4 dots
+for (let i = 0; i < totalDots; i++) {
+    const dot = document.createElement('span');
+    if (i === 0) dot.classList.add('active');
+    const targetIndex = Math.floor((i / totalDots) * totalCards);
+    dot.addEventListener('click', () => goToCard(targetIndex));
+    dotsContainer.appendChild(dot);
+}
+const dots = document.querySelectorAll('.carousel-dots span');
+
+function updateDots(index) {
+    const dots = document.querySelectorAll('.carousel-dots span');
+    const cardGroup = Math.floor((index / totalCards) * totalDots);
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === cardGroup);
+    });
+}
+
+function goToCard(index) {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    
+    // Ensure index is within bounds
+    const maxIndex = Math.max(0, totalCards - visibleCards);
+    currentIndex = Math.min(index, maxIndex);
+    
+    // Calculate movement based on card width (100% per card)
+    const moveX = (25 / visibleCards) * currentIndex;
+    track.style.transition = 'transform 0.5s ease-in-out';
+    track.style.transform = `translateX(-${moveX}%)`;
+    updateDots(currentIndex);
+    
+    setTimeout(() => {
+        isTransitioning = false;
+    }, 100);
+}
+
+function nextSlide() {
+    if (isTransitioning) return;
+    
+    isTransitioning = true;
+    
+    // Calculate next index
+    const nextIndex = (currentIndex + 1) % totalCards;
+    currentIndex = nextIndex;
+    
+    // Calculate movement based on card width (100% per card)
+    const moveX = (25 / visibleCards) * currentIndex;
+    track.style.transition = 'transform 0.5s ease-in-out';
+    track.style.transform = `translateX(-${moveX}%)`;
+    
+    // Update dots
+    updateDots(currentIndex);
+    
+    // Reset transition lock after animation
+    setTimeout(() => {
+        isTransitioning = false;
+    }, 100);
+}
+
+// Function to start the carousel
+function startCarousel() {
+    if (!carouselInterval) {
+        carouselInterval = setInterval(nextSlide, 3000);
+    }
+}
+
+// Function to stop the carousel
+function stopCarousel() {
+    if (carouselInterval) {
+        clearInterval(carouselInterval);
+        carouselInterval = null;
+    }
+}
+
+// Start the carousel initially
+startCarousel();
+
+// Pause on hover
+track.addEventListener('mouseenter', stopCarousel);
+
+// Resume when mouse leaves
+track.addEventListener('mouseleave', startCarousel);
+
+// Update the openPopup function
+function openPopup(popupId) {
+    const popup = document.getElementById(popupId);
+    if (popup) {
+        // Pause the carousel when popup is in block state
+        if (getComputedStyle(popup).display === 'block') {
+            stopCarousel();
+        }
+        
+        // Show new popup
+        document.body.style.overflow = 'hidden';
+        popup.style.display = 'flex';
+        
+        // Trigger reflow for smooth animation
+        void popup.offsetWidth;
+        popup.classList.add('showing');
+    }
+}
+
+// Update the closePopup function
+function closePopup() {
+    const popup = document.querySelector('.popup.showing');
+    if (popup) {
+        popup.classList.remove('showing');
+        document.body.style.overflow = 'auto';
+        
+        // Wait for transition to complete before hiding
+        setTimeout(() => {
+            popup.style.display = 'none';
+            // Resume carousel when popup is closed
+            if (getComputedStyle(popup).display !== 'block') {
+                startCarousel();
+            }
+        }, 300);
+    }
+}
